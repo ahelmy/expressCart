@@ -2,8 +2,14 @@
     <div class="sidebar-sticky">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a href="/admin"><img class="sidebar-brand" src="/images/logo-admin.png"></a>
-                <a href="#" data-toggle="modal" data-target="#globalSearchModal" class="sidebar-search text-muted">{{{feather 'search'}}}</a>
+                <a href="/admin">
+                    {{#if @root.config.cartLogo}}
+                    <img src="{{@root.config.cartLogo}}" class="sidebar-brand">
+                    {{else}}
+                    {{@root.config.cartTitle}}
+                    {{/if}}
+                    <a href="#" data-toggle="modal" data-target="#globalSearchModal"
+                        class="sidebar-search text-muted">{{{feather 'search'}}}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/admin/dashboard">

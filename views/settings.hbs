@@ -104,31 +104,7 @@
                 <label>{{ @root.__ "Custom CSS" }}</label>
                 <textarea class="form-control" rows="10" id="customCss" name="customCss">{{config.customCss}}</textarea>
                 <input type="hidden" id="customCss_input" name="customCss_input">
-            </div>
-            <div class="form-group">
-                <label>Email SMTP Host</label>
-                <input type="text" class="form-control" name="emailHost" value="{{config.emailHost}}" autocomplete="off" required>
-            </div>
-            <div class="form-group">
-                <label>Email SMTP Port</label>
-                <input type="text" class="form-control" name="emailPort" value="{{config.emailPort}}" autocomplete="off" required>
-            </div>
-            <div class="form-group">
-                <label>Email SMTP secure </label>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" {{checkedState config.emailSecure}} name="emailSecure">
-                    </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label>Email SMTP Username</label>
-                <input type="text" class="form-control" name="emailUser" value="{{config.emailUser}}" autocomplete="off" required>
-            </div>
-            <div class="form-group">
-                <label>Email SMTP Password</label>
-                <input type="password" class="form-control" name="emailPassword" value="{{config.emailPassword}}" autocomplete="off" required>
-            </div>
+            </div>          
             <div class="form-group">
                 <button id="sendTestEmail" class="btn btn-outline-success">{{ @root.__ "Send test email" }}</button>
             </div>
